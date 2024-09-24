@@ -2,7 +2,7 @@ import streamlit as st
 from contract import Sales
 from datetime import datetime, time
 from pydantic import ValidationError 
-from database import store_sale
+from database import save_sale
 
 def main():
   st.title("Sistema de CRM")
@@ -25,6 +25,8 @@ def main():
         quantity=quantity,
         product=product
       )
+      st.write(sale)
+      save_sale(sale)
       
     except ValidationError as e:
       st.error(f"Erro na validação dos dados: {e}")
