@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt
-from datetime import datetime, time
+from datetime import datetime
 from enum import Enum
 
 class ProductEnum(str, Enum):
