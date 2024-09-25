@@ -1,0 +1,690 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+    
+    
+      
+        <title>Requisitos - My Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.06209087.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documento-de-requisitos-com-validacoes-sistema-de-crm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Library" class="md-header__button md-logo" aria-label="My Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Requisitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Library" class="md-nav__button md-logo" aria-label="My Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Requisitos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documento-de-requisitos-com-validacoes-sistema-de-crm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documento de Requisitos com Validações - Sistema de CRM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documento de Requisitos com Validações - Sistema de CRM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição do Diagrama:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição do Diagrama:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-funcionais-e-validacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionais e Validações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-futuro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo Futuro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documento-de-requisitos-com-validacoes-sistema-de-crm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documento de Requisitos com Validações - Sistema de CRM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documento de Requisitos com Validações - Sistema de CRM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição do Diagrama:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição do Diagrama:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-funcionais-e-validacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionais e Validações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-futuro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo Futuro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Requisitos</h1>
+
+<h3 id="documento-de-requisitos-com-validacoes-sistema-de-crm"><strong>Documento de Requisitos com Validações - Sistema de CRM</strong></h3>
+<hr />
+<h4 id="objetivo"><strong>Objetivo</strong></h4>
+<p>O objetivo deste documento é definir os requisitos funcionais e as validações necessárias para o desenvolvimento do frontend do Sistema de CRM, desenvolvido com Streamlit. O sistema visa capturar informações sobre vendas realizadas, validá-las e exibi-las na tela.</p>
+<hr />
+<pre><code class="language-mermaid">graph TD
+    A[Usuário Digita no Frontend] --&gt; B{Validação do Contrato de Dados}
+
+    B -- Dados Válidos --&gt; C[Salva no Banco de Dados]
+    B -- Dados Inválidos --&gt; D[Erro de Validação Exibido]
+
+    A --&gt; |Entrada de Dados| B
+    B --&gt; |Validação pelo Pydantic| C
+    B --&gt; |Falha na Validação| D
+    C --&gt; E[Dados Salvos com Sucesso]
+    D --&gt; F[Mostrar Mensagem de Erro no Frontend]
+</code></pre>
+<h3 id="descricao-do-diagrama"><strong>Descrição do Diagrama:</strong></h3>
+<ol>
+<li>
+<p><strong>Usuário Digita no Frontend:</strong></p>
+</li>
+<li>
+<p>O usuário insere os dados necessários no frontend do sistema.</p>
+</li>
+<li>
+<p><strong>Validação do Contrato de Dados:</strong></p>
+</li>
+<li>
+<p>Os dados inseridos são validados usando o modelo Pydantic (contrato de dados) para garantir que estejam no formato correto e dentro das regras especificadas.</p>
+</li>
+<li>
+<p><strong>Dados Válidos:</strong></p>
+</li>
+<li>
+<p>Se os dados forem válidos, eles são enviados para o banco de dados e salvos.</p>
+</li>
+<li>
+<p><strong>Dados Inválidos:</strong></p>
+</li>
+<li>
+<p>Se os dados não atenderem aos critérios de validação, uma mensagem de erro é gerada e exibida no frontend.</p>
+</li>
+<li>
+<p><strong>Salvar no Banco de Dados:</strong></p>
+</li>
+<li>
+<p>Após a validação, os dados são persistidos no banco de dados.</p>
+</li>
+<li>
+<p><strong>Exibição de Mensagens:</strong></p>
+</li>
+<li>Exibe uma mensagem de sucesso quando os dados são salvos corretamente, ou uma mensagem de erro quando há falhas na validação.</li>
+</ol>
+<p>Esse diagrama mostra o fluxo completo desde a entrada até o salvamento dos dados, detalhando o processo de validação essencial para manter a integridade do sistema.</p>
+<hr />
+<h4 id="requisitos-funcionais-e-validacoes"><strong>Requisitos Funcionais e Validações</strong></h4>
+<ol>
+<li>
+<p><strong>Título do Sistema</strong></p>
+</li>
+<li>
+<p><strong>Descrição:</strong> O sistema deve exibir o título "Sistema de CRM" no topo da página.</p>
+</li>
+<li>
+<p><strong>Justificativa:</strong> Identificar claramente o sistema e sua finalidade para o usuário.</p>
+</li>
+<li>
+<p><strong>Campos de Entrada de Dados</strong></p>
+</li>
+<li>
+<p>O sistema deve fornecer campos para inserção de dados da venda. Cada campo deve ser claramente identificado e deve aceitar o tipo de entrada correto conforme descrito abaixo, com as respectivas validações.</p>
+</li>
+</ol>
+<p>##### <strong>Detalhamento dos Campos e Validações</strong></p>
+<ol>
+<li>
+<p><strong>Email do Vendedor</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Campo de texto para inserção do email do vendedor.</li>
+<li><strong>Tipo de Entrada:</strong> <code>text_input</code> (String)</li>
+<li><strong>Validação Esperada:</strong><ul>
+<li>Deve ser um email válido no formato padrão (ex: <code>vendedor@exemplo.com</code>).</li>
+<li>Verificar se o campo não está vazio.</li>
+</ul>
+</li>
+<li><strong>Exemplo de Uso:</strong> O usuário insere um email válido, como <code>vendedor@exemplo.com</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data da Compra</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Campo para selecionar a data em que a venda foi realizada.</li>
+<li><strong>Tipo de Entrada:</strong> <code>date_input</code> (Data)</li>
+<li><strong>Valor Padrão:</strong> A data atual (<code>datetime.now()</code>).</li>
+<li><strong>Validação Esperada:</strong><ul>
+<li>A data deve estar dentro do intervalo permitido: entre <code>01/09/2024</code> e <code>12/09/2024</code>.</li>
+<li>Não permitir datas fora do intervalo especificado.</li>
+</ul>
+</li>
+<li><strong>Exemplo de Uso:</strong> O usuário seleciona uma data como <code>05/09/2024</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hora da Compra</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Campo para selecionar a hora em que a venda foi realizada.</li>
+<li><strong>Tipo de Entrada:</strong> <code>time_input</code> (Hora)</li>
+<li><strong>Valor Padrão:</strong> 09:00 (hora inicial padrão).</li>
+<li><strong>Validação Esperada:</strong><ul>
+<li>A hora deve ser inserida dentro do intervalo de 09:00 às 17:00.</li>
+</ul>
+</li>
+<li><strong>Exemplo de Uso:</strong> O usuário seleciona <code>10:30</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Valor da Venda</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Campo numérico para inserir o valor monetário da venda realizada.</li>
+<li><strong>Tipo de Entrada:</strong> <code>number_input</code> (Float)</li>
+<li><strong>Valor Mínimo:</strong> 0.0 (não são permitidos valores negativos).</li>
+<li><strong>Formato:</strong> Decimal com duas casas (<code>format="%.2f"</code>).</li>
+<li><strong>Validação Esperada:</strong><ul>
+<li>Deve ser um número positivo maior que zero.</li>
+<li>Deve estar no formato monetário adequado com duas casas decimais.</li>
+</ul>
+</li>
+<li><strong>Exemplo de Uso:</strong> O usuário insere <code>1500.00</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Quantidade de Produtos</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Campo numérico para inserir a quantidade de produtos vendidos.</li>
+<li><strong>Tipo de Entrada:</strong> <code>number_input</code> (Inteiro)</li>
+<li><strong>Valor Mínimo:</strong> 1 (quantidade mínima permitida).</li>
+<li><strong>Passo:</strong> Incremento de 1 unidade por ajuste.</li>
+<li><strong>Validação Esperada:</strong><ul>
+<li>Deve ser um número inteiro positivo.</li>
+<li>Não deve ser zero ou negativo.</li>
+</ul>
+</li>
+<li><strong>Exemplo de Uso:</strong> O usuário insere <code>3</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Produto</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Campo de seleção para escolher o produto vendido.</li>
+<li><strong>Tipo de Entrada:</strong> <code>selectbox</code> (Seleção)</li>
+<li><strong>Opções Disponíveis:</strong><ul>
+<li>"Smartphone"</li>
+<li>"Laptop"</li>
+<li>"Fones de Ouvido"</li>
+</ul>
+</li>
+<li><strong>Validação Esperada:</strong><ul>
+<li>O produto selecionado deve ser uma das opções válidas.</li>
+<li>Não permitir seleção de produtos fora das opções listadas.</li>
+</ul>
+</li>
+<li><strong>Exemplo de Uso:</strong> O usuário seleciona "Laptop".</li>
+</ul>
+</li>
+<li>
+<p><strong>Botão de Submissão</strong></p>
+</li>
+<li>
+<p><strong>Descrição:</strong> Um botão para salvar e exibir os dados inseridos na tela.</p>
+</li>
+<li><strong>Rótulo do Botão:</strong> "Salvar"</li>
+<li>
+<p><strong>Comportamento:</strong> Quando clicado, o sistema deve capturar os dados inseridos nos campos, validar as entradas e exibi-las na tela se todos os campos estiverem corretos.</p>
+</li>
+<li>
+<p><strong>Exibição dos Dados</strong></p>
+</li>
+<li><strong>Descrição:</strong> Após a submissão, o sistema deve exibir os dados capturados na tela.</li>
+<li><strong>Formatos de Exibição:</strong><ul>
+<li><strong>Email do Vendedor:</strong> Exibe o email inserido.</li>
+<li><strong>Data e Hora da Compra:</strong> Exibe a data e hora combinadas como <code>yyyy-mm-dd hh:mm:ss</code>.</li>
+<li><strong>Valor da Venda:</strong> Exibe o valor formatado como moeda, ex.: <code>R$ 1500.00</code>.</li>
+<li><strong>Quantidade de Produtos:</strong> Exibe a quantidade inserida.</li>
+<li><strong>Produto:</strong> Exibe o nome do produto selecionado.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="notas"><strong>Notas</strong></h4>
+<ul>
+<li>Este sistema captura e valida os dados antes de exibi-los, garantindo que todas as entradas estejam corretas conforme as regras definidas.</li>
+<li>Em versões futuras, o sistema poderá ser integrado com um backend para persistência dos dados e funcionalidades avançadas de análise e relatórios.</li>
+</ul>
+<hr />
+<h4 id="objetivo-futuro"><strong>Objetivo Futuro</strong></h4>
+<ul>
+<li>Integrar validações avançadas para reforçar a integridade dos dados.</li>
+<li>Conectar o sistema a um banco de dados para armazenar vendas e gerar relatórios.</li>
+<li>Adicionar verificações adicionais para campos obrigatórios e dados duplicados.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
