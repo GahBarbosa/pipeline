@@ -9,15 +9,18 @@ class ProductEnum(str, Enum):
 
 class Sales(BaseModel):
     """
-    Modelo de dados para as vendas.
+    # Class Sales
+    ## Representa uma venda realizada.
 
     Args:
-        email (EmailStr): email do comprador
-        data (datetime): data da compra
-        valor (PositiveFloat): valor da compra
-        produto (PositiveInt): nome do produto
-        quantidade (PositiveInt): quantidade de produtos
-        produto (ProdutoEnum): categoria do produto
+        email (EmailStr): O e-mail do venderdor. Deve ser um endereço de e-mail válido.
+        date (datetime): A data e hora em que a venda foi realizada.
+        price (PositiveFloat): O preço do produto vendido. Deve ser um valor positivo.
+        quantity (PositiveInt): A quantidade do produto vendida. Deve ser um inteiro positivo.
+        product (ProductEnum): O produto vendido, representado por um enum.
+
+    Exceções:
+        Todos os campos são obrigatórios e devem atender aos tipos especificados.
     """
     email: EmailStr
     date: datetime

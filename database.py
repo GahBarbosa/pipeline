@@ -15,9 +15,24 @@ DB_USER = os.getenv("DB_USER")
 DB_PASS = os.getenv("DB_PASS")
 
 # Função para salvar os dados validados no PostgreSQL
-def save_sale(dados: Sales):
+def save_sale(sale: Sales):
     """
-    Função para salvar no postgres
+    # save_sale 
+    ## Salva uma venda no banco de dados.
+
+    Args:
+        sale (Sales): A instância da classe Sales a ser salva. Todos os campos devem ser preenchidos
+                       corretamente de acordo com as restrições definidas na classe Sales.
+
+    Raises:
+        DatabaseError: Se ocorrer um erro ao tentar salvar a venda no banco de dados.
+        ValidationError: Se a venda não atender às regras de validação definidas.
+
+    Examples:
+        ```python
+        sale = Sales(email="exemplo@dominio.com", date=datetime.now(), price=29.99, quantity=1, product=ProductEnum.PRODUTO_A)
+        save_sale(sale)
+        ```
     """
     try:
         conn = psycopg2.connect(
@@ -33,15 +48,15 @@ def save_sale(dados: Sales):
             "INSERT INTO sales (email, date, price, quantity, product) VALUES (%s, %s, %s, %s, %s)"
         )
         cursor.execute(insert_query, (
-            dados.email,
-            dados.date,
-            dados.price,
-            dados.quantity,
-            dados.product.value
+            sale.email,
+            sale.date,
+            sale.price,
+            sale.quantity,
+            sale.product.value
         ))
         conn.commit()
         cursor.close()
         conn.close()
-        st.success("Dados salvos com sucesso no banco de dados!")
+        st.success("Venda salvos com sucesso no banco de dados!")
     except Exception as e:
         st.error(f"Erro ao salvar no banco de dados: {e}")

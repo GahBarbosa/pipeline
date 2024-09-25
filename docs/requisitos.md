@@ -8,8 +8,6 @@ O objetivo deste documento é definir os requisitos funcionais e as validações
 
 ---
 
-Aqui está o diagrama em Mermaid que descreve o fluxo de dados desde a entrada do usuário no frontend até a validação dos dados e o salvamento no banco de dados, se aprovado.
-
 ```mermaid
 graph TD
     A[Usuário Digita no Frontend] --> B{Validação do Contrato de Dados}
